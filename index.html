@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samsung QLED TV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #050816;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .background-glow {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0,140,255,0.25), transparent 70%);
+      top: -200px;
+      right: -150px;
+      z-index: 0;
+      filter: blur(40px);
+    }
+
+    .background-glow2 {
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(118,0,255,0.18), transparent 70%);
+      bottom: -200px;
+      left: -120px;
+      z-index: 0;
+      filter: blur(50px);
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: auto;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      align-items: center;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(18px);
+      border-radius: 32px;
+      padding: 40px;
+      box-shadow: 0 20px 80px rgba(0,0,0,0.45);
+    }
+
+    .tv-image {
+      width: 100%;
+      border-radius: 24px;
+      transition: transform 0.4s ease;
+      filter: drop-shadow(0 25px 40px rgba(0,0,0,0.55));
+    }
+
+    .tv-image:hover {
+      transform: scale(1.03);
+    }
+
+    .badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #008cff, #7b2fff);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1;
+      margin-bottom: 20px;
+      font-weight: 800;
+      letter-spacing: -2px;
+    }
+
+    .subtitle {
+      color: rgba(255,255,255,0.72);
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(120px, 1fr));
+      gap: 16px;
+      margin-bottom: 35px;
+    }
+
+    .feature-box {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 18px;
+      border-radius: 18px;
+    }
+
+    .feature-box h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .feature-box p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .price {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .price span {
+      font-size: 18px;
+      color: rgba(255,255,255,0.6);
+      font-weight: 400;
+    }
+
+    .buy-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 18px;
+      border-radius: 18px;
+      text-decoration: none;
+      background: linear-gradient(90deg, #008cff, #7b2fff);
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 35px rgba(0,140,255,0.35);
+    }
+
+    .buy-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 45px rgba(0,140,255,0.5);
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 18px;
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        padding: 24px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .price {
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-glow"></div>
+  <div class="background-glow2"></div>
+
+  <div class="container">
+    <div class="card">
+
+      <div>
+        <img src="1000001807.png" alt="Samsung QLED TV" class="tv-image">
+      </div>
+
+      <div>
+        <div class="badge">Premium QLED Experience</div>
+
+        <h1>Samsung<br>QLED TV</h1>
+
+        <p class="subtitle">
+          Stunning ultra-clear visuals, cinematic color, and immersive sound.
+          Upgrade your entertainment setup with a sleek modern display built for movies, gaming, and streaming.
+        </p>
+
+        <div class="features">
+          <div class="feature-box">
+            <h3>4K QLED</h3>
+            <p>Sharp detail and vibrant colors.</p>
+          </div>
+
+          <div class="feature-box">
+            <h3>Smart TV</h3>
+            <p>Netflix, YouTube, apps & more.</p>
+          </div>
+
+          <div class="feature-box">
+            <h3>Gaming Ready</h3>
+            <p>Low latency and smooth motion.</p>
+          </div>
+
+          <div class="feature-box">
+            <h3>Modern Design</h3>
+            <p>Thin bezels with premium style.</p>
+          </div>
+        </div>
+
+        <div class="price">
+          $499 <span>limited availability</span>
+        </div>
+
+        <a class="buy-button" href="https://buy.stripe.com/9B628s5MjcZc9zfe8p18c03" target="_blank">
+          Buy Now Securely
+        </a>
+
+        <div class="footer-note">
+          Secure checkout powered by Stripe
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
